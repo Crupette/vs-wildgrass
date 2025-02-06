@@ -1,0 +1,128 @@
+[
+    {
+        "enabled": true,
+        "op": "addmerge",
+        "path": "/BlockPatchBiomes",
+        "value": {
+            "bluegrass-*": {
+                "biorealm": [
+                    "atlantic nearctic",
+                    "central palearctic"
+                ],
+                "bioriver": "both"
+            }
+        },
+        "file": "biomes:config/biomes2.json",
+        "side": "server",
+        "dependsOn": [{ "modid": "biomes" }]
+    },
+    {
+        "enabled": true,
+        "op": "addmerge",
+        "path": "/BlockPatchBiomes",
+        "value": {
+            "bushgrass-*": {
+                "biorealm": [
+                    "atlantic nearctic",
+                    "central palearctic"
+                ],
+                "bioriver": "both"
+            }
+        },
+        "file": "biomes:config/biomes2.json",
+        "side": "server",
+        "dependsOn": [{ "modid": "biomes" }]
+    },
+    {
+        "enabled": true,
+        "op": "addmerge",
+        "path": "/BlockPatchBiomes",
+        "value": {
+            "buttongrass-*": {
+                "biorealm": [
+                    "pacific nearctic",
+                    "pacific palearctic",
+                    "australasian"
+                ],
+                "bioriver": "both"
+            }
+        },
+        "file": "biomes:config/biomes2.json",
+        "side": "server",
+        "dependsOn": [{ "modid": "biomes" }]
+    },
+    {
+        "enabled": true,
+        "op": "addmerge",
+        "path": "/BlockPatchBiomes",
+        "value": {
+            "common-rush-*": {
+                "biorealm": [
+                    "atlantic nearctic",
+                    "atlantic palearctic",
+                    "eastern palearctic",
+                    "atlantic afrotropic"
+                ],
+                "bioriver": "both"
+            }
+        },
+        "file": "biomes:config/biomes2.json",
+        "side": "server",
+        "dependsOn": [{ "modid": "biomes" }]
+    },
+    {
+        "enabled": true,
+        "op": "addmerge",
+        "path": "/BlockPatchBiomes",
+        "value": {
+            "fescue-*": {
+                "biorealm": [
+                    "atlantic nearctic",
+                    "atlantic palearctic",
+                    "central palearctic",
+                    "eastern palearctic"
+                ],
+                "bioriver": "both"
+            }
+        },
+        "file": "biomes:config/biomes2.json",
+        "side": "server",
+        "dependsOn": [{ "modid": "biomes" }]
+    },
+    {
+        "enabled": true,
+        "op": "addmerge",
+        "path": "/BlockPatchBiomes",
+        "value": {
+            "ryegrass-*": {
+                "biorealm": [
+                    "atlantic nearctic",
+                    "atlantic palearctic",
+                    "pacific nearctic"
+                ],
+                "bioriver": "both"
+            }
+        },
+        "file": "biomes:config/biomes2.json",
+        "side": "server",
+        "dependsOn": [{ "modid": "biomes" }]
+    },
+    {
+        "enabled": true,
+        "op": "addmerge",
+        "path": "/BlockPatchBiomes",
+        "value": {
+            "switchgrass-*": {
+                "biorealm": [
+                    "atlantic nearctic",
+                    "central palearctic",
+                    "atlantic neotropic"
+                ],
+                "bioriver": "both"
+            }
+        },
+        "file": "biomes:config/biomes2.json",
+        "side": "server",
+        "dependsOn": [{ "modid": "biomes" }]
+    }
+]
