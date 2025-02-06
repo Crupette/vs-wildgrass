@@ -28,10 +28,24 @@
     "block-bluegrass-4-*": "Pâturin des prés (en floraison)",
     "item-seeds-bluegrass": "Graines de pâturin des prés",
 
+    "block-buttongrass-0-*": "Herbe à boutons (coupée)",
+    "block-buttongrass-1-*": "Herbe à boutons (courte)",
+    "block-buttongrass-2-*": "Herbe à boutons (moyenne)",
+    "block-buttongrass-3-*": "Herbe à boutons (haute)",
+    "block-buttongrass-4-*": "Herbe à boutons (en floraison)",
+    "item-seeds-buttongrass": "Graines d'herbe à boutons",
+
     "block-ryegrass-perennial-0-*": "Ivraie vivace (coupée)",
     "block-ryegrass-perennial-1-*": "Ivraie vivace (courte)",
     "block-ryegrass-perennial-2-*": "Ivraie vivace (moyenne)",
     "block-ryegrass-perennial-3-*": "Ivraie vivace (haute)",
     "block-ryegrass-perennial-4-*": "Ivraie vivace (en floraison)",
-    "item-seeds-ryegrass-perennial": "Graines d'ivraie vivace"
+    "item-seeds-ryegrass-perennial": "Graines d'ivraie vivace",
+
+    "block-fescue-meadow-0-*": "Fétuque des prés (coupée)",
+    "block-fescue-meadow-1-*": "Fétuque des prés (courte)",
+    "block-fescue-meadow-2-*": "Fétuque des prés (moyenne)",
+    "block-fescue-meadow-3-*": "Fétuque des prés (haute)",
+    "block-fescue-meadow-4-*": "Fétuque des prés (en floraison)",
+    "item-seeds-fescue-meadow": "Graines de fétuque des prés"
 }
