@@ -20,17 +20,23 @@ namespace Wildgrass
         public override void AssetsFinalize(ICoreAPI api)
         {
             base.AssetsFinalize(api);
+            List<AssetLocation> grassCodes = new();
+
+            foreach(var block in api.World.Blocks) {
+                if(block is BlockWildgrass) grassCodes.Add(block.Code);
+            }
+
             AssetLocation tallgrassCode = new("tallgrass-*");
             foreach(var entity in api.World.EntityTypes) {
                 var worldgenBlocks = entity?.Server?.SpawnConditions?.Worldgen?.InsideBlockCodes;
                 var runtimeBlocks = entity?.Server?.SpawnConditions?.Runtime?.InsideBlockCodes;
 
                 if(worldgenBlocks != null && worldgenBlocks.Contains(tallgrassCode)) {
-                    worldgenBlocks = worldgenBlocks.Append(Core.WildgrassBlockCodes);
+                    worldgenBlocks = worldgenBlocks.Append(grassCodes.ToArray());
                     entity.Server.SpawnConditions.Worldgen.InsideBlockCodes = worldgenBlocks;
                 }
                 if(runtimeBlocks != null && runtimeBlocks.Contains(tallgrassCode)) {
-                    runtimeBlocks = runtimeBlocks.Append(Core.WildgrassBlockCodes);
+                    runtimeBlocks = runtimeBlocks.Append(grassCodes.ToArray());
                     entity.Server.SpawnConditions.Runtime.InsideBlockCodes = runtimeBlocks;
                 }
             }

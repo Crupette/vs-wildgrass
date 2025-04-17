@@ -8,15 +8,7 @@ namespace Wildgrass
 {
     public class Core : ModSystem
     {
-        public static readonly AssetLocation[] WildgrassBlockCodes = {
-            "wildgrass:switchgrass-*",
-            "wildgrass:ryegrass-*",
-            "wildgrass:bushgrass-*",
-            "wildgrass:bluegrass-*",
-            "wildgrass:buttongrass-*",
-            "wildgrass:rush-*",
-            "wildgrass:fescue-*"
-        };
+        public static AssetLocation[] WildgrassBlockCodes;
 
         Harmony harmony;
         public ICoreAPI api;

@@ -22,7 +22,7 @@
                 "--tracelog",
                 "--addModPath",
                 "${workspaceFolder}/wildgrass/bin/Debug/Mods",
-                "--dataPath", "/home/jon/.config/VintagestoryDataPre",
+                "--dataPath", "${env:HOME}/.config/VintagestoryDataDev",
             ],
             "console": "internalConsole",
             "stopAtEntry": false
@@ -40,7 +40,6 @@
             },
             "preLaunchTask": "build",
             "args": [
-                "--dataPath", "/home/jon/.config/VintagestoryDataPre",
                 "--tracelog",
                 "--addModPath",
                 "${workspaceFolder}/wildgrass/bin/Debug/Mods"

@@ -7,12 +7,18 @@
             "chance": 1,
             "spread": 0.015,
             "threshold": 0.5,
-            "minTemp": 0,
+            "minTemp": -10,
             "maxTemp": 40,
             "minRain": 0.2,
             "maxRain": 0.8,
             "minForest": 0.0,
             "maxForest": 0.3,
+            "biorealm": [
+                "atlantic nearctic",
+                "central palearctic",
+                "atlantic neotropic"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:switchgrass-2-free",
                 "wildgrass:switchgrass-3-free",
@@ -30,6 +36,12 @@
             "maxRain": 1.0,
             "minForest": 0.0,
             "maxForest": 0.8,
+            "biorealm": [
+                "atlantic nearctic",
+                "atlantic palearctic",
+                "pacific neotropic"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:ryegrass-perennial-1-free",
                 "wildgrass:ryegrass-perennial-2-free",
@@ -47,6 +59,11 @@
             "maxRain": 1.0,
             "minForest": 0.0,
             "maxForest": 0.5,
+            "biorealm": [
+                "atlantic nearctic",
+                "central palearctic"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:bluegrass-1-free",
                 "wildgrass:bluegrass-2-free",
@@ -81,6 +98,13 @@
             "maxRain": 1.0,
             "minForest": 0.0,
             "maxForest": 0.4,
+            "biorealm": [
+                "atlantic nearctic",
+                "atlantic palearctic",
+                "central palearctic",
+                "eastern palearctic"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:fescue-meadow-1-free",
                 "wildgrass:fescue-meadow-2-free",

@@ -21,6 +21,7 @@ namespace Wildgrass
         public ClampedSimplexNoise[] grassDensity;
 
         public WildgrassLayerConfig wildgrass;
+        public BlockLayerConfig genericGrassConfig;
 
         public override double ExecuteOrder()
         {
@@ -51,6 +52,7 @@ namespace Wildgrass
         {
             LoadGlobalConfig(api);
             wildgrass = WildgrassLayerConfig.GetInstance(api);
+            genericGrassConfig = BlockLayerConfig.GetInstance(api);
 
             rnd = new LCGRandom(api.WorldManager.Seed);
             grassHeight = new ClampedSimplexNoise[wildgrass.Species.Length];
@@ -94,7 +96,6 @@ namespace Wildgrass
             // increasing z -> top to bottom
             BlockPos herePos = new(0);
 
-
             for (int x = 0; x < chunksize; x++)
             {
                 for (int z = 0; z < chunksize; z++)
@@ -114,9 +115,8 @@ namespace Wildgrass
                     float rainRel = Climate.GetRainFall((climate >> 8) & 0xff, posY) / 255f;
                     float forestRel = GameMath.BiLerp(forestUpLeft, forestUpRight, forestBotLeft, forestBotRight, (float)x / chunksize, (float)z / chunksize) / 255f;
 
-                    int prevY = posY;
-                    herePos.Y = posY;
-                    PlaceWildGrass(herePos, x, prevY, z, chunks, rainRel, tempRel, forestRel);
+                    herePos.Y = posY + 1;
+                    PlaceWildGrass(herePos, x, posY + 1, z, chunks, rainRel, tempRel, forestRel);
                 }
             }
         }
@@ -124,19 +124,22 @@ namespace Wildgrass
         void PlaceWildGrass(BlockPos worldPos, int x, int posY, int z, IServerChunk[] chunks, float rainRel, float tempRel, float forestRel)
         {
             if(posY >= api.WorldManager.MapSizeY - 1 || posY < 1) return;
-            if(rnd.NextDouble() < forestRel * 0.9f) return;
 
-            int belowId = chunks[posY / chunksize].Data[(chunksize * (posY % chunksize) + z) * chunksize + x];
-            if(api.World.Blocks[belowId].Fertility <= rnd.NextInt(100)) return;
+            IServerChunk chunk = chunks[posY / chunksize];
+            int chunki = (chunksize * (posY % chunksize) + z) * chunksize + x;
+            int hereId = chunk.Data[chunki];
+            if(api.World.Blocks[hereId] is not BlockTallGrass) return;
 
-            IServerChunk chunk = chunks[(posY + 1) / chunksize];
             WildgrassSpecies species = SpeciesForPos(worldPos, rainRel, tempRel, forestRel);
-            if(species == null) return;
+            if(species == null) {
+                return;
+            }
+            if(rnd.NextDouble() > Config.GenerateDensity) return;
 
-            var grassHeight = this.grassHeight[wildgrass.Species.IndexOf(species)];
+            var grassHeight = this.grassHeight[species.index];
             int gheight = (int)Math.Clamp(grassHeight.Noise(worldPos.X, worldPos.Z) * species.BlockCodes.Length, 0, species.BlockCodes.Length - 1);
 
-            chunk.Data[(chunksize * ((posY + 1) % chunksize) + z) * chunksize + x] = species.BlockIds[gheight];
+            chunk.Data[chunki] = species.BlockIds[gheight];
         }
 
         public WildgrassSpecies SpeciesForPos(BlockPos pos, float rainRel, float tempRel, float forestRel)
@@ -154,6 +157,9 @@ namespace Wildgrass
                    rainRel <= species.MaxRain &&
                    tempRel >= species.MinTemp &&
                    tempRel <= species.MaxTemp) {
+                    if(BiomesCompat.IsBiomesEnabled) {
+                        if(!BiomesCompat.WildgrassCanBeInBiome(api, pos, species)) continue;
+                    }
                     if(finalSpecies.Item1 < rndVal)
                         finalSpecies = (rndVal, species);
                 }
@@ -161,11 +167,11 @@ namespace Wildgrass
             return finalSpecies.Item2;
         }
 
-        [HarmonyPrefix]
-        [HarmonyPatch("PlaceTallGrass")]
-        static bool PlaceTallGrass_Prefix(GenBlockLayers __instance, int x, int posY, int z, IServerChunk[] chunks, float rainRel, float tempRel, float temp, float forestRel)
-        {
-            return false;
-        }
+        //[HarmonyPrefix]
+        //[HarmonyPatch("PlaceTallGrass")]
+        //static bool PlaceTallGrass_Prefix(GenBlockLayers __instance, int x, int posY, int z, IServerChunk[] chunks, float rainRel, float tempRel, float temp, float forestRel)
+        //{
+        //    return false;
+        //}
     }
 }
