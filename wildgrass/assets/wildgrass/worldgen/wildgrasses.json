@@ -81,6 +81,11 @@
             "maxRain": 1.0,
             "minForest": 0.0,
             "maxForest": 1.0,
+            "biorealm": [
+                "atlantic nearctic",
+                "central palearctic"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:bushgrass-1-free",
                 "wildgrass:bushgrass-2-free",
@@ -122,6 +127,10 @@
             "maxRain": 1.0,
             "minForest": 0.0,
             "maxForest": 0.6,
+            "biorealm": [
+                "australasian"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:buttongrass-1-free",
                 "wildgrass:buttongrass-2-free",

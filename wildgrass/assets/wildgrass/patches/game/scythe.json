@@ -1,6 +1,7 @@
 [
     {   "file": "game:itemtypes/tool/scythe",
         "path": "/attributes/codePrefixes/-",
+        "side": "server",
         "op": "addeach",
         "value": [
             "switchgrass",

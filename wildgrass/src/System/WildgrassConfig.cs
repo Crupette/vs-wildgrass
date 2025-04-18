@@ -8,13 +8,13 @@ public class ConfigData
     public float GenerateDensity = 1.0f;
 }
 
-public class Config : ModSystem
+public class WildgrassConfig : ModSystem
 {
     static ConfigData Data;
 
     public static float GenerateDensity => Data.GenerateDensity;
 
-    public Config()
+    public WildgrassConfig()
     {
         Data = new();
     }

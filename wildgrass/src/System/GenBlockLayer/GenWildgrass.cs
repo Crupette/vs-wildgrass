@@ -21,7 +21,6 @@ namespace Wildgrass
         public ClampedSimplexNoise[] grassDensity;
 
         public WildgrassLayerConfig wildgrass;
-        public BlockLayerConfig genericGrassConfig;
 
         public override double ExecuteOrder()
         {
@@ -42,7 +41,7 @@ namespace Wildgrass
 
             if(TerraGenConfig.DoDecorationPass) {
                 api.Event.ChunkColumnGeneration(OnChunkColumnGeneration, EnumWorldGenPass.Terrain, "standard");
-                if(Core.IsDev) {
+                if(WildgrassCore.IsDev) {
                     api.Event.ChunkColumnGeneration(OnChunkColumnGeneration, EnumWorldGenPass.Terrain, "superflat");
                 }
             }
@@ -52,7 +51,6 @@ namespace Wildgrass
         {
             LoadGlobalConfig(api);
             wildgrass = WildgrassLayerConfig.GetInstance(api);
-            genericGrassConfig = BlockLayerConfig.GetInstance(api);
 
             rnd = new LCGRandom(api.WorldManager.Seed);
             grassHeight = new ClampedSimplexNoise[wildgrass.Species.Length];
@@ -134,7 +132,7 @@ namespace Wildgrass
             if(species == null) {
                 return;
             }
-            if(rnd.NextDouble() > Config.GenerateDensity) return;
+            if(rnd.NextDouble() > WildgrassConfig.GenerateDensity) return;
 
             var grassHeight = this.grassHeight[species.index];
             int gheight = (int)Math.Clamp(grassHeight.Noise(worldPos.X, worldPos.Z) * species.BlockCodes.Length, 0, species.BlockCodes.Length - 1);
@@ -157,9 +155,9 @@ namespace Wildgrass
                    rainRel <= species.MaxRain &&
                    tempRel >= species.MinTemp &&
                    tempRel <= species.MaxTemp) {
-                    if(BiomesCompat.IsBiomesEnabled) {
-                        if(!BiomesCompat.WildgrassCanBeInBiome(api, pos, species)) continue;
-                    }
+                    if(!WildgrassBiomesCompat.WildgrassCanBeInBiome(api, pos, species)) 
+                        continue;
+                        
                     if(finalSpecies.Item1 < rndVal)
                         finalSpecies = (rndVal, species);
                 }

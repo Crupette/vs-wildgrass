@@ -6,7 +6,7 @@ using HarmonyLib;
 
 namespace Wildgrass
 {
-    public class Core : ModSystem
+    public class WildgrassCore : ModSystem
     {
         public static AssetLocation[] WildgrassBlockCodes;
 

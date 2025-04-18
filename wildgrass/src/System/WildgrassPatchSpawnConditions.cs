@@ -10,7 +10,7 @@ using Vintagestory.API.Util;
 
 namespace Wildgrass
 {
-    public class PatchSpawnConditions : ModSystem
+    public class WildgrassPatchSpawnConditions : ModSystem
     {
         public override bool ShouldLoad(EnumAppSide forSide)
         {

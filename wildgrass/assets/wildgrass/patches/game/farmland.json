@@ -1,6 +1,7 @@
 [
     {   "file": "game:blocktypes/soil/farmland",
         "path": "/attributes/weedBlockCodes/-",
+        "side": "server",
         "op": "addeach",
         "value": [
             { "code": "wildgrass:switchgrass-1-free", "chance": 0.5 },

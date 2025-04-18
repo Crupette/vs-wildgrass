@@ -31,9 +31,9 @@ namespace Wildgrass
         [JsonProperty]
         public double MaxForest;
         [JsonProperty]
-        public String[] biorealm;
+        public string[] biorealm;
         [JsonProperty]
-        public String bioriver;
+        public string bioriver;
         [JsonProperty]
         public AssetLocation[] BlockCodes;
         public int[] BlockIds;
