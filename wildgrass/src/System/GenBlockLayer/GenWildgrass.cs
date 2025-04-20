@@ -155,6 +155,7 @@ namespace Wildgrass
                    rainRel <= species.MaxRain &&
                    tempRel >= species.MinTemp &&
                    tempRel <= species.MaxTemp) {
+                    if(WildgrassBiomesCompat.IsBiomesEnabled)
                     if(!WildgrassBiomesCompat.WildgrassCanBeInBiome(api, pos, species)) 
                         continue;
                         

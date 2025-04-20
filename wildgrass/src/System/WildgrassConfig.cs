@@ -36,6 +36,7 @@ public class WildgrassConfig : ModSystem
     public override void AssetsFinalize(ICoreAPI api)
     {
         base.AssetsFinalize(api);
+        if(api.Side != EnumAppSide.Server) return;
         WildgrassCore wildgrass = WildgrassCore.GetInstance(api);
         foreach(BlockWildgrass block in wildgrass.WildgrassBlocks) {
             foreach(var drop in block.Drops) {
