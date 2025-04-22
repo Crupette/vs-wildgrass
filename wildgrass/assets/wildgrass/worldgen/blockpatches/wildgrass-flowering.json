@@ -218,5 +218,29 @@
         "maxRain": 1.0,
         "minForest": 0.0,
         "maxForest": 0.4
+    },
+
+    {
+        "comment": "Medium patches of flowering bermuda grass",
+        "blockCodes": [ 
+            "bermudagrass-1-free",
+            "bermudagrass-2-free",
+            "bermudagrass-3-free"
+        ],
+        
+        "quantity": {
+            "avg": 48,
+            "var": 24
+        },
+        "offsetX": { "avg": 0, "var": 8 },
+        "offsetZ": { "avg": 0, "var": 8 },
+        "chance": 0.125,
+
+        "minTemp": -5,
+        "maxTemp": 40,
+        "minRain": 0.2,
+        "maxRain": 1.0,
+        "minForest": 0.0,
+        "maxForest": 0.3
     }
 ]

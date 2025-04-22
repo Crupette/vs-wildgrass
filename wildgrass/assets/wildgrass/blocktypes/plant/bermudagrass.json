@@ -1,0 +1,116 @@
+{
+	"code": "bermudagrass",
+	"class": "wildgrass.BlockWildgrass",
+	"variantgroups": [
+		{ "code": "growth", "states": [ "0", "1", "2", "3" ] },
+		{ "code": "cover", "states": ["free", "snow"] }
+	],
+
+	"creativeinventory": { "general": [ "*-free" ], "flora": [ "*-free" ] },
+	"attributes": {
+		"handbook": {
+			"groupBy": ["bermudagrass-*"]
+		},
+		"climateColorMapForMap": "climatePlantTint",
+		"seasonColorMapForMap": "seasonalGrass",
+		"cutIntoByType": {
+			"*-0-*": null,
+			"*": "wildgrass:bermudagrass-0-free"
+		},
+		"growthByType": {
+			"*-0-*": {
+				"growthChanceOnTick": 0.08,
+				"minTemp": 0,
+				"code": "wildgrass:bermudagrass-1-free"
+			},
+			"*-1-*": {
+				"growthChanceOnTick": 0.06,
+				"minTemp": 0,
+				"code": "wildgrass:bermudagrass-2-free"
+			},
+			"*-2-*": {
+				"growthChanceOnTick": 0.04,
+				"minTemp": 0,
+				"code": "wildgrass:bermudagrass-3-free"
+			},
+			"*-3-*": {
+				"growthChanceOnTick": 0.06,
+				"minTemp": 0,
+				"code": "wildgrass:bermudagrass-2-free"
+			}
+		},
+		"allowStepWhenStuck": true,
+		"overrideRandomDrawOffset": 2
+	},
+
+	"blockmaterial": "plant",
+	"matterstate": "solid",
+	"faceCullMode": "Default",
+	"renderpass": "OpaqueNoCull",
+	"doNotRenderAtLod2": true,
+	"randomDrawOffset": true,
+	"randomizeRotations": true,
+
+	"drawTypeByType": {
+		"*-snow": "JSONAndSnowLayer",
+		"*": "JSON"
+	},
+	"shapeByType": { 
+		"*-3-*": { "base": "block/bermudagrass/bermudagrass-flowering" },
+		"*": { "base": "block/bermudagrass/bermudagrass" }
+	},
+	"texturesByType": {
+		"*-3-*": {
+			"grass": { "base": "block/plant/bermudagrass/bermudagrass-2" },
+			"culms": { "base": "block/plant/bermudagrass/bermudagrass-culms" },
+			"flowers": { "base": "block/plant/bermudagrass/bermudagrass-flowers" }
+		},
+		"*": {
+			"grass": { "base": "block/plant/bermudagrass/bermudagrass-{growth}"}
+		}
+	},
+
+	"sounds": {
+		"place": "game:block/plant",
+		"break": "game:block/plant",
+		"hit": "game:block/plant",
+		"walkByType": { "*-snow": "game:walk/snow" }
+	},
+	"rainPermeable": true,
+	"materialDensity": 200,
+	"combustibleProps": {
+		"burnTemperature": 600,
+		"burnDuration": 6
+	},
+	"dropsByType": {
+		"*-0-*": [],
+		"@.*-(1|2)-.*": [ 
+			{ "type": "item", "code": "game:drygrass", "quantity": { "avg": 1}, "tool": "knife" },
+			{ "type": "item", "code": "game:drygrass", "quantity": { "avg": 1}, "tool": "scythe" }
+		],
+		"*-3-*": [ 
+			{ "type": "item", "code": "game:drygrass", "quantity": { "avg": 1}, "tool": "knife" },
+			{ "type": "item", "code": "game:drygrass", "quantity": { "avg": 1}, "tool": "scythe" },
+			{ "type": "item", "code": "seeds-bermudagrass", "quantity": { "avg": 1, "var": 1 } }
+		]
+	},
+
+	"resistance": 0.5,
+	"lightAbsorption": 0,
+	"sidesolid": { "all": false },
+	"sideopaque": { "all": false },
+	"replaceable": 6000,
+
+	"vertexFlags": {
+		//Make the normals face up
+		"normal": 224
+	},
+
+	"collisionbox": null,
+	"selectionboxByType": {
+		"*-0-*": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 },
+		"*-1-*": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.15, "z2": 1 },
+		"*": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.15, "z2": 1 }
+	},
+	"frostable": true
+}

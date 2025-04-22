@@ -15,8 +15,7 @@
             "maxForest": 0.3,
             "biorealm": [
                 "atlantic nearctic",
-                "central palearctic",
-                "atlantic neotropic"
+                "pacific nearctic"
             ],
             "bioriver": "both",
             "blockCodes": [
@@ -37,9 +36,8 @@
             "minForest": 0.0,
             "maxForest": 0.8,
             "biorealm": [
-                "atlantic nearctic",
                 "atlantic palearctic",
-                "pacific neotropic"
+                "central palearctic"
             ],
             "bioriver": "both",
             "blockCodes": [
@@ -61,7 +59,10 @@
             "maxForest": 0.5,
             "biorealm": [
                 "atlantic nearctic",
-                "central palearctic"
+                "pacific nearctic",
+                "atlantic palearctic",
+                "central palearctic",
+                "eastern palearctic"
             ],
             "bioriver": "both",
             "blockCodes": [
@@ -82,8 +83,10 @@
             "minForest": 0.0,
             "maxForest": 1.0,
             "biorealm": [
-                "atlantic nearctic",
-                "central palearctic"
+                "atlantic palearctic",
+                "central palearctic",
+                "eastern palearctic",
+                "eastern afrotropic"
             ],
             "bioriver": "both",
             "blockCodes": [
@@ -104,7 +107,6 @@
             "minForest": 0.0,
             "maxForest": 0.4,
             "biorealm": [
-                "atlantic nearctic",
                 "atlantic palearctic",
                 "central palearctic",
                 "eastern palearctic"
@@ -135,6 +137,32 @@
                 "wildgrass:buttongrass-1-free",
                 "wildgrass:buttongrass-2-free",
                 "wildgrass:buttongrass-3-free"
+            ]
+        },
+        {
+            "code": "wildgrass:bermudagrass",
+            "chance": 2.0,
+            "spread": 0.025,
+            "threshold": 0.1,
+            "minTemp": -5,
+            "maxTemp": 40,
+            "minRain": 0.3,
+            "maxRain": 0.8,
+            "minForest": 0.0,
+            "maxForest": 0.5,
+            "biorealm": [
+                "atlantic palearctic",
+                "central palearctic",
+                "atlantic afrotropic",
+                "eastern afrotropic",
+                "australasian",
+                "oceania",
+                "pacific palearctic"
+            ],
+            "bioriver": "both",
+            "blockCodes": [
+                "wildgrass:bermudagrass-1-free",
+                "wildgrass:bermudagrass-2-free"
             ]
         }
     ]

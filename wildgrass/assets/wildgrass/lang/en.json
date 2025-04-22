@@ -47,5 +47,11 @@
     "block-fescue-meadow-2-*": "Meadow fescue (Medium)",
     "block-fescue-meadow-3-*": "Meadow fescue (Tall)",
     "block-fescue-meadow-4-*": "Meadow fescue (Blooming)",
-    "item-seeds-fescue-meadow": "Meadow fescue seeds"
+    "item-seeds-fescue-meadow": "Meadow fescue seeds",
+
+    "block-bermudagrass-0-*": "Bermudagrass (Cut)",
+    "block-bermudagrass-1-*": "Bermudagrass (Short)",
+    "block-bermudagrass-2-*": "Bermudagrass (Full)",
+    "block-bermudagrass-3-*": "Bermudagrass (Blooming)",
+    "item-seeds-bermudagrass": "Bermudagrass seeds"
 }

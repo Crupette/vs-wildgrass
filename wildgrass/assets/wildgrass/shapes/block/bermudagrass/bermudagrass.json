@@ -1,0 +1,78 @@
+{
+	"editor": {
+		"collapsedPaths": "",
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"grass": "block/plant/bermudagrass/bermudagrass-2"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [ 0.0, 0.0, 0.0 ],
+			"to": [ 0.0, 0.0, 0.0 ],
+			"faces": {
+			},
+			"children": [
+				{
+					"name": "Face1",
+					"from": [ 1.0, 0.0, 2.0 ],
+					"to": [ 17.0, 1.0, 22.0 ],
+					"shade": false,
+					"climateColorMap": "climatePlantTint",
+					"seasonColorMap": "seasonalGrass",
+					"rotationOrigin": [ 1.0, 0.0, 2.0 ],
+					"rotationX": -20.0,
+					"faces": {
+						"down": { "texture": "#grass", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 180, "autoUv": false, "windMode": [0,0,2,2] }
+					}
+				},
+				{
+					"name": "Face2",
+					"from": [ 15.0, 0.0, 14.0 ],
+					"to": [ 31.0, 1.0, 34.0 ],
+					"shade": false,
+					"climateColorMap": "climatePlantTint",
+					"seasonColorMap": "seasonalGrass",
+					"rotationOrigin": [ 15.0, 0.0, 14.0 ],
+					"rotationX": 20.0,
+					"rotationY": -180.0,
+					"faces": {
+						"down": { "texture": "#grass", "uv": [ 16.0, 0.0, 0.0, 16.0 ], "rotation": 180, "autoUv": false, "snapUv": false, "windMode": [0,0,2,2] }
+					}
+				},
+				{
+					"name": "Face3",
+					"from": [ 2.0, 0.0, 1.0 ],
+					"to": [ 22.0, 1.0, 17.0 ],
+					"shade": false,
+					"climateColorMap": "climatePlantTint",
+					"seasonColorMap": "seasonalGrass",
+					"rotationOrigin": [ 2.0, 0.0, 1.0 ],
+					"rotationZ": 20.0,
+					"faces": {
+						"down": { "texture": "#grass", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 270, "autoUv": false, "snapUv": false, "windMode": [0,2,2,0] }
+					}
+				},
+				{
+					"name": "Face4",
+					"from": [ 9.0, 0.0, 15.0 ],
+					"to": [ 29.0, 1.0, 31.0 ],
+					"shade": false,
+					"climateColorMap": "climatePlantTint",
+					"seasonColorMap": "seasonalGrass",
+					"rotationOrigin": [ 9.0, 0.0, 15.0 ],
+					"rotationY": -180.0,
+					"rotationZ": 20.0,
+					"faces": {
+						"down": { "texture": "#grass", "uv": [ 16.0, 0.0, 0.0, 16.0 ], "rotation": 270, "autoUv": false, "snapUv": false, "windMode": [0,2,2,0] }
+					}
+				}
+			]
+		}
+	]}

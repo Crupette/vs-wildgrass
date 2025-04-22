@@ -7,7 +7,10 @@
             "bluegrass-*": {
                 "biorealm": [
                     "atlantic nearctic",
-                    "central palearctic"
+                    "pacific nearctic",
+                    "atlantic palearctic",
+                    "central palearctic",
+                    "eastern palearctic"
                 ],
                 "bioriver": "both"
             }
@@ -23,8 +26,10 @@
         "value": {
             "bushgrass-*": {
                 "biorealm": [
-                    "atlantic nearctic",
-                    "central palearctic"
+                    "atlantic palearctic",
+                    "central palearctic",
+                    "eastern palearctic",
+                    "eastern afrotropic"
                 ],
                 "bioriver": "both"
             }
@@ -40,8 +45,6 @@
         "value": {
             "buttongrass-*": {
                 "biorealm": [
-                    "pacific nearctic",
-                    "pacific palearctic",
                     "australasian"
                 ],
                 "bioriver": "both"
@@ -59,9 +62,11 @@
             "common-rush-*": {
                 "biorealm": [
                     "atlantic nearctic",
+                    "pacific nearctic",
+                    "pacific neotropic",
                     "atlantic palearctic",
-                    "eastern palearctic",
-                    "atlantic afrotropic"
+                    "central palearctic",
+                    "eastern afrotropic"
                 ],
                 "bioriver": "both"
             }
@@ -96,9 +101,8 @@
         "value": {
             "ryegrass-*": {
                 "biorealm": [
-                    "atlantic nearctic",
                     "atlantic palearctic",
-                    "pacific nearctic"
+                    "central palearctic"
                 ],
                 "bioriver": "both"
             }
@@ -115,8 +119,7 @@
             "switchgrass-*": {
                 "biorealm": [
                     "atlantic nearctic",
-                    "central palearctic",
-                    "atlantic neotropic"
+                    "pacific nearctic"
                 ],
                 "bioriver": "both"
             }

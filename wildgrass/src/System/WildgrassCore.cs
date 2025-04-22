@@ -26,6 +26,12 @@ namespace Wildgrass
             api.RegisterBlockClass("wildgrass.BlockWildgrass", typeof(BlockWildgrass));
 
             api.RegisterItemClass("wildgrass.ItemGrassSeeds", typeof(ItemGrassSeeds));
+
+            if(api.Side == EnumAppSide.Client) {
+                VertexFlags flags = new();
+                flags.All = VertexFlags.PackNormal(0, 1, 0);
+                api.Logger.Debug($"Pack Normal (0,1,0) {flags.Normal}");
+            }
         }
 
         public BlockWildgrass[] WildgrassBlocks => ObjectCacheUtil.GetOrCreate(api, "Wildgrass.WildgrassBlocks",  () => {

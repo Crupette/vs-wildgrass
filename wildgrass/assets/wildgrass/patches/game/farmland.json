@@ -4,13 +4,14 @@
         "side": "server",
         "op": "addeach",
         "value": [
-            { "code": "wildgrass:switchgrass-1-free", "chance": 0.5 },
-            { "code": "wildgrass:bushgrass-1-free", "chance": 0.5 },
-            { "code": "wildgrass:bluegrass-1-free", "chance": 0.5 },
-            { "code": "wildgrass:buttongrass-1-free", "chance": 0.5 },
-            { "code": "wildgrass:ryegrass-perennial-1-free", "chance": 0.5 },
-            { "code": "wildgrass:fescue-meadow-1-free", "chance": 0.5 },
-            { "code": "wildgrass:rush-common-1-free", "chance": 0.5 }
+            { "code": "wildgrass:switchgrass-1-free", "chance": 0.25 },
+            { "code": "wildgrass:bushgrass-1-free", "chance": 0.25 },
+            { "code": "wildgrass:bluegrass-1-free", "chance": 0.25 },
+            { "code": "wildgrass:buttongrass-1-free", "chance": 0.25 },
+            { "code": "wildgrass:ryegrass-perennial-1-free", "chance": 0.25 },
+            { "code": "wildgrass:fescue-meadow-1-free", "chance": 0.25 },
+            { "code": "wildgrass:rush-common-1-free", "chance": 0.25 },
+            { "code": "wildgrass:bermudagrass-1-free", "chance": 0.35 }
         ]
     }
 ]

@@ -12,7 +12,8 @@
 				"ryegrass-perennial",
 				"bluegrass",
 				"fescue-meadow",
-				"buttongrass"
+				"buttongrass",
+				"bermudagrass"
             ]
         }
     ],
@@ -25,7 +26,8 @@
 			"seeds-ryegrass-perennial": "wildgrass:ryegrass-perennial-0-free",
 			"seeds-bluegrass": "wildgrass:bluegrass-0-free",
 			"seeds-fescue-meadow": "wildgrass:fescue-meadow-0-free",
-			"seeds-buttongrass": "wildgrass:buttongrass-0-free"
+			"seeds-buttongrass": "wildgrass:buttongrass-0-free",
+			"seeds-bermudagrass": "wildgrass:bermudagrass-0-free"
 		},
 		"plantContainable": {
 			"largeContainerByType": {
@@ -78,7 +80,7 @@
 						"grass": { "base": "block/plant/buttongrass/buttongrass-3"},
 						"flowers": { "base": "block/plant/buttongrass/buttongrass-flowers"}
 					}
-				},
+				}
 			}
 		}
 	},
