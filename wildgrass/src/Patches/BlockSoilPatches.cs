@@ -42,8 +42,7 @@ namespace Wildgrass
             var species = genWildgrassSystem.SpeciesForPos(abovePos, rainRel, tempRel, forestRel);
 
             if(species == null) {
-                __result = null;
-                return false;
+                return true;
             }
 
             var asset = AssetLocation.Create(species.Code).WithPathAppendix("-0-free");

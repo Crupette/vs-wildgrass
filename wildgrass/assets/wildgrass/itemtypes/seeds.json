@@ -13,7 +13,8 @@
 				"bluegrass",
 				"fescue-meadow",
 				"buttongrass",
-				"bermudagrass"
+				"bermudagrass",
+				"buffalograss"
             ]
         }
     ],
@@ -27,7 +28,8 @@
 			"seeds-bluegrass": "wildgrass:bluegrass-0-free",
 			"seeds-fescue-meadow": "wildgrass:fescue-meadow-0-free",
 			"seeds-buttongrass": "wildgrass:buttongrass-0-free",
-			"seeds-bermudagrass": "wildgrass:bermudagrass-0-free"
+			"seeds-bermudagrass": "wildgrass:bermudagrass-0-free",
+			"seeds-buffalograss": "wildgrass:buffalograss-0-free"
 		},
 		"plantContainable": {
 			"largeContainerByType": {

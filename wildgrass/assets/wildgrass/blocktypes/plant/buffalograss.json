@@ -1,0 +1,110 @@
+{
+	"code": "buffalograss",
+	"class": "wildgrass.BlockWildgrass",
+	"variantgroups": [
+		{ "code": "growth", "states": [ "0", "1", "2" ] },
+		{ "code": "cover", "states": ["free", "snow"] }
+	],
+
+	"creativeinventory": { "general": [ "*-free" ], "flora": [ "*-free" ] },
+	"attributes": {
+		"handbook": {
+			"groupBy": ["buffalograss-*"]
+		},
+		"climateColorMapForMap": "climatePlantTint",
+		"seasonColorMapForMap": "seasonalGrass",
+		"cutIntoByType": {
+			"*-0-*": null,
+			"*": "wildgrass:buffalograss-0-free"
+		},
+		"growthByType": {
+			"*-0-*": {
+				"growthChanceOnTick": 0.08,
+				"minTemp": 5,
+				"code": "wildgrass:buffalograss-1-free"
+			},
+			"*-1-*": {
+				"growthChanceOnTick": 0.06,
+				"minTemp": 10,
+				"code": "wildgrass:buffalograss-2-free"
+			},
+			"*-2-*": {
+				"growthChanceOnTick": 0.04,
+				"minTemp": 10,
+				"code": "wildgrass:buffalograss-1-free"
+			},
+		},
+		"allowStepWhenStuck": true,
+		"overrideRandomDrawOffset": 2
+	},
+
+	"blockmaterial": "plant",
+	"matterstate": "solid",
+	"faceCullMode": "Default",
+	"renderpass": "OpaqueNoCull",
+	"doNotRenderAtLod2": true,
+	"randomDrawOffset": true,
+	"randomizeRotations": true,
+	"randomSizeAdjust": 0.25,
+
+	"vertexFlags": {
+		//Make the normals face up
+		"normal": 224
+	},
+	"drawTypeByType": {
+		"*-snow": "JSONAndSnowLayer",
+		"*": "JSON"
+	},
+	"shapeByType": { 
+		"*-2-*": { "base": "block/buffalograss/buffalograss-flowering" },
+		"*": { "base": "block/buffalograss/buffalograss" }
+	},
+	"texturesByType": {
+		"*-2-*": {
+			"grass": { "base": "block/plant/buffalograss/buffalograss-1" },
+			"flowers": { "base": "block/plant/buffalograss/buffalograss-flowers" }
+		},
+		"*": {
+			"grass": { "base": "block/plant/buffalograss/buffalograss-{growth}"}
+		}
+	},
+
+	"sounds": {
+		"place": "game:block/plant",
+		"break": "game:block/plant",
+		"hit": "game:block/plant",
+		"walkByType": { "*-snow": "game:walk/snow" }
+	},
+	"rainPermeable": true,
+	"materialDensity": 200,
+	"combustibleProps": {
+		"burnTemperature": 600,
+		"burnDuration": 6
+	},
+	"dropsByType": {
+		"*-0-*": [],
+		"*-1-*": [ 
+			{ "type": "item", "code": "game:drygrass", "quantity": { "avg": 1}, "tool": "knife" },
+			{ "type": "item", "code": "game:drygrass", "quantity": { "avg": 1}, "tool": "scythe" }
+		],
+		"*-2-*": [ 
+			{ "type": "item", "code": "game:drygrass", "quantity": { "avg": 1}, "tool": "knife" },
+			{ "type": "item", "code": "game:drygrass", "quantity": { "avg": 1}, "tool": "scythe" },
+			{ "type": "item", "code": "seeds-buffalograss", "quantity": { "avg": 1, "var": 1 } }
+		]
+	},
+
+	"resistance": 0.5,
+	"lightAbsorption": 0,
+	"sidesolid": { "all": false },
+	"sideopaque": { "all": false },
+	"replaceable": 6000,
+
+	"collisionbox": null,
+	"selectionboxByType": {
+		"*-0-*": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 },
+		"*-1-*": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.15, "z2": 1 },
+		"*": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.15, "z2": 1 }
+	},
+	"frostable": true
+}

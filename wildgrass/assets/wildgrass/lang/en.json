@@ -53,5 +53,10 @@
     "block-bermudagrass-1-*": "Bermudagrass (Short)",
     "block-bermudagrass-2-*": "Bermudagrass (Full)",
     "block-bermudagrass-3-*": "Bermudagrass (Blooming)",
-    "item-seeds-bermudagrass": "Bermudagrass seeds"
+    "item-seeds-bermudagrass": "Bermudagrass seeds",
+
+    "block-buffalograss-0-*": "Buffalograss (Cut)",
+    "block-buffalograss-1-*": "Buffalograss",
+    "block-buffalograss-2-*": "Buffalo grass (Blooming)",
+    "item-seeds-buffalograss": "Buffalograss seeds"
 }

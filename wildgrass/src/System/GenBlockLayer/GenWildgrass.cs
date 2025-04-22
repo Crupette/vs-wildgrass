@@ -91,6 +91,11 @@ namespace Wildgrass
             int forestBotLeft = forestMap.GetUnpaddedInt((int)(rdx * forestStep), (int)(rdz * forestStep + forestStep));
             int forestBotRight = forestMap.GetUnpaddedInt((int)(rdx * forestStep + forestStep), (int)(rdz * forestStep + forestStep));
 
+            int climateUpLeft = climateMap.GetUnpaddedInt((int)(rdx * climateStep), (int)(rdz * climateStep));
+            int climateUpRight = climateMap.GetUnpaddedInt((int)(rdx * climateStep + climateStep), (int)(rdz * climateStep));
+            int climateBotLeft = climateMap.GetUnpaddedInt((int)(rdx * climateStep), (int)(rdz * climateStep + climateStep));
+            int climateBotRight = climateMap.GetUnpaddedInt((int)(rdx * climateStep + climateStep), (int)(rdz * climateStep + climateStep));
+
             // increasing x -> left to right
             // increasing z -> top to bottom
             BlockPos herePos = new(0);
@@ -104,9 +109,10 @@ namespace Wildgrass
                     int posY = heightMap[z * chunksize + x];
                     if (posY >= api.WorldManager.MapSizeY) continue;
 
-                    int climate = climateMap.GetUnpaddedColorLerped(
-                        rdx * climateStep + climateStep * x / chunksize,
-                        rdz * climateStep + climateStep * z / chunksize
+                    int climate = GameMath.BiLerpRgbColor(
+                        (float)x/ chunksize,
+                        (float)z / chunksize,
+                        climateUpLeft, climateUpRight, climateBotLeft, climateBotRight
                     );
 
                     int tempUnscaled = (climate >> 16) & 0xff;
@@ -150,8 +156,8 @@ namespace Wildgrass
                 var species = wildgrass.Species[i];
                 var density = grassDensity[i];
 
-                double rndVal = (wildgrass.RndWeight * rnd.NextDouble()) + (wildgrass.PerlinWeight * density.Noise(pos.X, pos.Z, -0.5));
-                rndVal = rndVal * rnd.NextDouble() / species.Threshold;
+                double rndVal = (wildgrass.RndWeight * rnd.NextDouble()) + (wildgrass.PerlinWeight * density.Noise(pos.X, pos.Z, 0));
+                if(rndVal < species.Threshold) continue;
                 if(forestRel >= species.MinForest &&
                    forestRel <= species.MaxForest &&
                    rainRel >= species.MinRain &&

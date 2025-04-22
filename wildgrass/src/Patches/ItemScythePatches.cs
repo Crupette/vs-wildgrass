@@ -21,7 +21,6 @@ namespace Wildgrass
             Block block = api.World.BlockAccessor.GetBlock(pos);
             if(block is not BlockWildgrass wildgrass) return true;
 
-
             if(wildgrass.CutInto == null) return true;
             Block trimmedBlock = wildgrass.CutInto;
             if(trimmedBlock == null) return true;
