@@ -1,10 +1,13 @@
 {
-    "rndWeight": 0.25,
+    // How much noise to add to each perlin region.
+    // Too little makes rough edges between grass species
+    // Too much makes each region indistinguishable
+    "rndWeight": 0.1,
     "perlinWeight": 1.0,
     "species": [
         {
             "code": "wildgrass:switchgrass",
-            "chance": 1,
+            "chance": 2,
             "spread": 0.015,
             "threshold": 0.5,
             "minTemp": -10,
@@ -27,7 +30,7 @@
         {
             "code": "wildgrass:ryegrass-perennial",
             "chance": 2.0,
-            "spread": 0.025,
+            "spread": 0.01,
             "threshold": 0.2,
             "minTemp": -3,
             "maxTemp": 30,
@@ -49,7 +52,7 @@
         {
             "code": "wildgrass:bluegrass",
             "chance": 3.0,
-            "spread": 0.02,
+            "spread": 0.01,
             "threshold": 0.2,
             "minTemp": -4,
             "maxTemp": 40,
@@ -73,9 +76,9 @@
         },
         {
             "code": "wildgrass:bushgrass",
-            "chance": 1.0,
+            "chance": 0.5,
             "spread": 0.05,
-            "threshold": 0.3,
+            "threshold": 0.5,
             "minTemp": -3,
             "maxTemp": 18,
             "minRain": 0.1,
@@ -98,8 +101,8 @@
         {
             "code": "wildgrass:fescue-meadow",
             "chance": 2.0,
-            "spread": 0.025,
-            "threshold": 0.3,
+            "spread": 0.02,
+            "threshold": 0.2,
             "minTemp": -3,
             "maxTemp": 30,
             "minRain": 0.6,
@@ -120,9 +123,9 @@
         },
         {
             "code": "wildgrass:buttongrass",
-            "chance": 2.0,
+            "chance": 1.0,
             "spread": 0.025,
-            "threshold": 0.4,
+            "threshold": 0.5,
             "minTemp": -3,
             "maxTemp": 18,
             "minRain": 0.4,
@@ -141,12 +144,12 @@
         },
         {
             "code": "wildgrass:bermudagrass",
-            "chance": 2.0,
-            "spread": 0.025,
+            "chance": 3.0,
+            "spread": 0.01,
             "threshold": 0.1,
             "minTemp": -5,
             "maxTemp": 40,
-            "minRain": 0.3,
+            "minRain": 0.2,
             "maxRain": 0.8,
             "minForest": 0.0,
             "maxForest": 0.5,

@@ -59,9 +59,14 @@
 	"matterstate": "solid",
 	"faceCullMode": "Default",
 	"renderpass": "OpaqueNoCull",
+	"doNotRenderAtLod2": true,
 	"randomDrawOffset": true,
 	"randomizeRotations": true,
 
+	"vertexFlags": {
+		//Make the normals face up
+		"normal": 224
+	},
 	"drawTypeByType": {
 		"*-snow": "JSONAndSnowLayer",
 		"*": "JSON"

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using HarmonyLib;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
@@ -126,6 +127,8 @@ namespace Wildgrass
             IServerChunk chunk = chunks[posY / chunksize];
             int chunki = (chunksize * (posY % chunksize) + z) * chunksize + x;
             int hereId = chunk.Data[chunki];
+            
+            if(!WildgrassCore.IsDev)
             if(api.World.Blocks[hereId] is not BlockTallGrass) return;
 
             WildgrassSpecies species = SpeciesForPos(worldPos, rainRel, tempRel, forestRel);
@@ -147,7 +150,7 @@ namespace Wildgrass
                 var species = wildgrass.Species[i];
                 var density = grassDensity[i];
 
-                double rndVal = wildgrass.RndWeight * rnd.NextDouble() + wildgrass.PerlinWeight * density.Noise(pos.X, pos.Z, -0.5);
+                double rndVal = (wildgrass.RndWeight * rnd.NextDouble()) + (wildgrass.PerlinWeight * density.Noise(pos.X, pos.Z, -0.5));
                 rndVal = rndVal * rnd.NextDouble() / species.Threshold;
                 if(forestRel >= species.MinForest &&
                    forestRel <= species.MaxForest &&

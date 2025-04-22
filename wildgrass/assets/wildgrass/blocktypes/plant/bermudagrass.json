@@ -20,22 +20,22 @@
 		"growthByType": {
 			"*-0-*": {
 				"growthChanceOnTick": 0.08,
-				"minTemp": 0,
+				"minTemp": 5,
 				"code": "wildgrass:bermudagrass-1-free"
 			},
 			"*-1-*": {
 				"growthChanceOnTick": 0.06,
-				"minTemp": 0,
+				"minTemp": 10,
 				"code": "wildgrass:bermudagrass-2-free"
 			},
 			"*-2-*": {
 				"growthChanceOnTick": 0.04,
-				"minTemp": 0,
+				"minTemp": 10,
 				"code": "wildgrass:bermudagrass-3-free"
 			},
 			"*-3-*": {
 				"growthChanceOnTick": 0.06,
-				"minTemp": 0,
+				"minTemp": 15,
 				"code": "wildgrass:bermudagrass-2-free"
 			}
 		},
@@ -50,7 +50,12 @@
 	"doNotRenderAtLod2": true,
 	"randomDrawOffset": true,
 	"randomizeRotations": true,
+	"randomSizeAdjust": 0.15,
 
+	"vertexFlags": {
+		//Make the normals face up
+		"normal": 224
+	},
 	"drawTypeByType": {
 		"*-snow": "JSONAndSnowLayer",
 		"*": "JSON"
@@ -100,11 +105,6 @@
 	"sidesolid": { "all": false },
 	"sideopaque": { "all": false },
 	"replaceable": 6000,
-
-	"vertexFlags": {
-		//Make the normals face up
-		"normal": 224
-	},
 
 	"collisionbox": null,
 	"selectionboxByType": {

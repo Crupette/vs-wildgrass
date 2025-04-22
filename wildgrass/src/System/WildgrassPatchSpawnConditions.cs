@@ -20,10 +20,13 @@ namespace Wildgrass
         public override void AssetsFinalize(ICoreAPI api)
         {
             base.AssetsFinalize(api);
-            List<AssetLocation> grassCodes = new();
 
-            foreach(var block in api.World.Blocks) {
-                if(block is BlockWildgrass) grassCodes.Add(block.Code);
+            if(api is not ICoreServerAPI sapi) return;
+            WildgrassCore system = sapi.ModLoader.GetModSystem<WildgrassCore>();
+
+            List<AssetLocation> grassCodes = new();
+            foreach(var block in system.WildgrassBlocks) {
+                grassCodes.Add(block.Code);
             }
 
             AssetLocation tallgrassCode = new("tallgrass-*");
