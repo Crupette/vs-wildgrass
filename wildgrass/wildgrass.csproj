@@ -15,6 +15,10 @@
       <HintPath>$(VINTAGE_STORY)/Mods/VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Biomes">
+      <HintPath>/home/jon/.config/VintagestoryDataDev/Mods/biomes/biomes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Newtonsoft">
       <HintPath>$(VINTAGE_STORY)/Lib/Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>

@@ -1,18 +1,26 @@
 {
-    "rndWeight": 0.25,
+    // How much noise to add to each perlin region.
+    // Too little makes rough edges between grass species
+    // Too much makes each region indistinguishable
+    "rndWeight": 0.1,
     "perlinWeight": 1.0,
     "species": [
         {
             "code": "wildgrass:switchgrass",
-            "chance": 1,
+            "chance": 2,
             "spread": 0.015,
-            "threshold": 0.5,
-            "minTemp": 0,
-            "maxTemp": 40,
+            "threshold": 0.25,
+            "minTemp": -5,
+            "maxTemp": 30,
             "minRain": 0.2,
             "maxRain": 0.8,
             "minForest": 0.0,
             "maxForest": 0.3,
+            "biorealm": [
+                "atlantic nearctic",
+                "pacific nearctic"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:switchgrass-2-free",
                 "wildgrass:switchgrass-3-free",
@@ -22,14 +30,19 @@
         {
             "code": "wildgrass:ryegrass-perennial",
             "chance": 2.0,
-            "spread": 0.025,
-            "threshold": 0.2,
+            "spread": 0.01,
+            "threshold": 0.1,
             "minTemp": -3,
-            "maxTemp": 30,
+            "maxTemp": 18,
             "minRain": 0.2,
             "maxRain": 1.0,
             "minForest": 0.0,
             "maxForest": 0.8,
+            "biorealm": [
+                "atlantic palearctic",
+                "central palearctic"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:ryegrass-perennial-1-free",
                 "wildgrass:ryegrass-perennial-2-free",
@@ -38,15 +51,23 @@
         },
         {
             "code": "wildgrass:bluegrass",
-            "chance": 3.0,
-            "spread": 0.02,
-            "threshold": 0.2,
+            "chance": 2.0,
+            "spread": 0.01,
+            "threshold": 0.1,
             "minTemp": -4,
-            "maxTemp": 40,
+            "maxTemp": 18,
             "minRain": 0.4,
             "maxRain": 1.0,
             "minForest": 0.0,
             "maxForest": 0.5,
+            "biorealm": [
+                "atlantic nearctic",
+                "pacific nearctic",
+                "atlantic palearctic",
+                "central palearctic",
+                "eastern palearctic"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:bluegrass-1-free",
                 "wildgrass:bluegrass-2-free",
@@ -56,14 +77,21 @@
         {
             "code": "wildgrass:bushgrass",
             "chance": 1.0,
-            "spread": 0.05,
-            "threshold": 0.3,
+            "spread": 0.025,
+            "threshold": 0.33,
             "minTemp": -3,
             "maxTemp": 18,
             "minRain": 0.1,
             "maxRain": 1.0,
             "minForest": 0.0,
             "maxForest": 1.0,
+            "biorealm": [
+                "atlantic palearctic",
+                "central palearctic",
+                "eastern palearctic",
+                "eastern afrotropic"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:bushgrass-1-free",
                 "wildgrass:bushgrass-2-free",
@@ -73,14 +101,20 @@
         {
             "code": "wildgrass:fescue-meadow",
             "chance": 2.0,
-            "spread": 0.025,
-            "threshold": 0.3,
-            "minTemp": -3,
-            "maxTemp": 30,
+            "spread": 0.02,
+            "threshold": 0.1,
+            "minTemp": -10,
+            "maxTemp": 20,
             "minRain": 0.6,
             "maxRain": 1.0,
             "minForest": 0.0,
             "maxForest": 0.4,
+            "biorealm": [
+                "atlantic palearctic",
+                "central palearctic",
+                "eastern palearctic"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:fescue-meadow-1-free",
                 "wildgrass:fescue-meadow-2-free",
@@ -91,17 +125,67 @@
             "code": "wildgrass:buttongrass",
             "chance": 2.0,
             "spread": 0.025,
-            "threshold": 0.4,
-            "minTemp": -3,
-            "maxTemp": 18,
+            "threshold": 0.25,
+            "minTemp": -10,
+            "maxTemp": 20,
             "minRain": 0.4,
             "maxRain": 1.0,
             "minForest": 0.0,
             "maxForest": 0.6,
+            "biorealm": [
+                "australasian"
+            ],
+            "bioriver": "both",
             "blockCodes": [
                 "wildgrass:buttongrass-1-free",
                 "wildgrass:buttongrass-2-free",
                 "wildgrass:buttongrass-3-free"
+            ]
+        },
+        {
+            "code": "wildgrass:bermudagrass",
+            "chance": 2.0,
+            "spread": 0.01,
+            "threshold": 0.2,
+            "minTemp": 0,
+            "maxTemp": 25,
+            "minRain": 0.2,
+            "maxRain": 0.8,
+            "minForest": 0.0,
+            "maxForest": 0.5,
+            "biorealm": [
+                "atlantic palearctic",
+                "central palearctic",
+                "atlantic afrotropic",
+                "eastern afrotropic",
+                "australasian",
+                "oceania",
+                "pacific palearctic"
+            ],
+            "bioriver": "both",
+            "blockCodes": [
+                "wildgrass:bermudagrass-1-free",
+                "wildgrass:bermudagrass-2-free"
+            ]
+        },
+        {
+            "code": "wildgrass:buffalograss",
+            "chance": 2,
+            "spread": 0.025,
+            "threshold": 0.1,
+            "minTemp": 0,
+            "maxTemp": 40,
+            "minRain": 0.0,
+            "maxRain": 0.3,
+            "minForest": 0.0,
+            "maxForest": 1.0,
+            "biorealm": [
+                "atlantic nearctic",
+                "pacific nearctic"
+            ],
+            "bioriver": "both",
+            "blockCodes": [
+                "wildgrass:buffalograss-1-free"
             ]
         }
     ]

@@ -1,3 +1,4 @@
+using System;
 using HarmonyLib;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -30,8 +31,13 @@ namespace Wildgrass
         [JsonProperty]
         public double MaxForest;
         [JsonProperty]
+        public string[] biorealm;
+        [JsonProperty]
+        public string bioriver;
+        [JsonProperty]
         public AssetLocation[] BlockCodes;
         public int[] BlockIds;
+        public int index;
     }
 
     public class WildgrassLayerConfig
@@ -53,6 +59,7 @@ namespace Wildgrass
             for(int i = 0; i < blockLayerConfig.Species.Length; i++) {
                 ref var species = ref(blockLayerConfig.Species[i]);
                 species.BlockIds = new int[species.BlockCodes.Length];
+                species.index = i;
                 for(int j = 0; j < species.BlockCodes.Length; j++) {
                     species.BlockIds[j] = api.WorldManager.GetBlockId(species.BlockCodes[j]);
                 }
