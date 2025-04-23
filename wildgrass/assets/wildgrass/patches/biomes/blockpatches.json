@@ -6,8 +6,6 @@
         "value": {
             "bluegrass-*": {
                 "biorealm": [
-                    "atlantic nearctic",
-                    "pacific nearctic",
                     "atlantic palearctic",
                     "central palearctic",
                     "eastern palearctic"
@@ -29,6 +27,8 @@
                     "atlantic palearctic",
                     "central palearctic",
                     "eastern palearctic",
+                    "pacific palearctic",
+                    "atlantic afrotropic",
                     "eastern afrotropic"
                 ],
                 "bioriver": "both"
@@ -45,6 +45,8 @@
         "value": {
             "buttongrass-*": {
                 "biorealm": [
+                    "pacific nearctic",
+                    "pacific palearctic",
                     "australasian"
                 ],
                 "bioriver": "both"
@@ -61,11 +63,15 @@
         "value": {
             "common-rush-*": {
                 "biorealm": [
-                    "atlantic nearctic",
                     "pacific nearctic",
-                    "pacific neotropic",
+                    "atlantic nearctic",
                     "atlantic palearctic",
                     "central palearctic",
+                    "eastern palearctic",
+                    "pacific palearctic",
+                    "pacific neotropic",
+                    "atlantic neotropic",
+                    "atlantic afrotropic",
                     "eastern afrotropic"
                 ],
                 "bioriver": "both"
@@ -82,10 +88,8 @@
         "value": {
             "fescue-*": {
                 "biorealm": [
-                    "atlantic nearctic",
                     "atlantic palearctic",
-                    "central palearctic",
-                    "eastern palearctic"
+                    "central palearctic"
                 ],
                 "bioriver": "both"
             }
