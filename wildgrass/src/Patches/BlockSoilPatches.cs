@@ -18,6 +18,7 @@ namespace Wildgrass
 
             float tallGrassGrowthChance = (float)traverse.Field("tallGrassGrowthChance").GetValue();
             var genWildgrassSystem = world.Api.ModLoader.GetModSystem<GenWildgrass>();
+            if(genWildgrassSystem == null) throw new NullReferenceException("Could not find GenWildgrass system");
 
             if(offthreadRandom.NextDouble() > tallGrassGrowthChance) {
                 __result = null;
@@ -30,10 +31,6 @@ namespace Wildgrass
                 return false;
             }
 
-            if(genWildgrassSystem == null) {
-                world.Logger.Debug("Could not find wilgrass gen system");
-                return false;
-            }
             var climate = world.BlockAccessor.GetClimateAt(abovePos, EnumGetClimateMode.WorldGenValues);
 
             float rainRel = climate.Rainfall;

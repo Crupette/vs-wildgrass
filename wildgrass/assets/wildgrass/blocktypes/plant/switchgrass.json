@@ -39,8 +39,9 @@
 				"code": "wildgrass:switchgrass-4-free"
 			},
 			"*-4-*": {
-				"growthChanceOnTick": 0.01,
+				"growthChanceOnTick": 0.02,
 				"minTemp": 16,
+				"months": [ "july", "august", "september" ],
 				"code": "wildgrass:switchgrass-5-free"
 			},
 			"*-5-*": {

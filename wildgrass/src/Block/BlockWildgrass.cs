@@ -1,5 +1,7 @@
 using System;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using Newtonsoft.Json;
 using Vintagestory.API.Client;
 using Vintagestory.API.Client.Tesselation;
 using Vintagestory.API.Common;
@@ -12,9 +14,15 @@ namespace Wildgrass
 {
     public class BlockWildgrass : Block, IDrawYAdjustable, IWithDrawnHeight
     {
+        [JsonObject]
         public class WildgrassGrowth {
+            [JsonProperty]
             public float growthChanceOnTick;
+            [JsonProperty]
             public float minTemp;
+            [JsonProperty]
+            public string[] months;
+            [JsonProperty]
             public AssetLocation code;
         }
 
@@ -43,17 +51,25 @@ namespace Wildgrass
         {
             extra = null;
             if(Growth == null) return false;
-            float growthChanceOnTick = Growth.growthChanceOnTick;
-
-            if(offThreadRandom.NextDouble() > growthChanceOnTick) return false;
             if(world.BlockAccessor.GetRainMapHeightAt(pos) > pos.Y + 1) return false;
+
+
+            float growthChanceOnTick = Growth.growthChanceOnTick;
+            if(offThreadRandom.NextDouble() > growthChanceOnTick) return false;
 
             ClimateCondition climateCond = GetClimateAt(world.BlockAccessor, pos);
             if(climateCond.Temperature < Growth.minTemp) return false;
 
+            if(Growth.months?.Any() ?? false) {
+                EnumMonth month = world.Calendar.MonthName;
+                string monthString = month.ToString().ToLower();
+                if(!Growth.months.Intersect(new string[] {monthString}).Any()) return false;
+            }
+
             Block nextBlock = world.GetBlock(Growth.code);
             if(nextBlock != null) extra = nextBlock;
             return extra != null;
+            
         }
 
         public override void OnServerGameTick(IWorldAccessor world, BlockPos pos, object extra = null)

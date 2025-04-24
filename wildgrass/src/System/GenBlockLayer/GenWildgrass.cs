@@ -15,13 +15,14 @@ namespace Wildgrass
 {
     [HarmonyPatch(typeof(GenBlockLayers))]
     class GenWildgrass : ModStdWorldGen {
-        private ICoreServerAPI api;
+        public ICoreServerAPI api;
 
         public LCGRandom rnd;
         public ClampedSimplexNoise[] grassHeight;
         public ClampedSimplexNoise[] grassDensity;
 
         public WildgrassLayerConfig wildgrass;
+        public static GenWildgrass Instance;
 
         public override double ExecuteOrder()
         {
@@ -36,6 +37,7 @@ namespace Wildgrass
         public override void StartServerSide(ICoreServerAPI api)
         {
             this.api = api;
+            Instance = this;
 
             api.Event.InitWorldGenerator(InitWildgrassGen, "standard");
             api.Event.InitWorldGenerator(InitWildgrassGen, "superflat");

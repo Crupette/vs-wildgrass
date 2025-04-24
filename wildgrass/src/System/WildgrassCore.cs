@@ -13,10 +13,13 @@ namespace Wildgrass
         Harmony harmony;
         public ICoreAPI api;
         public static bool IsDev = false;
+        public static WildgrassCore Instance;
         
         public override void Start(ICoreAPI api)
         {
             IsDev = Mod.Info.Version.Contains("dev");
+            Instance = this;
+
             this.api = api;
             if(!Harmony.HasAnyPatches(Mod.Info.ModID)) {
                 harmony = new Harmony(Mod.Info.ModID);
