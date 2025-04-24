@@ -36,12 +36,12 @@
 			"*-3-*": {
 				"growthChanceOnTick": 0.02,
 				"minTemp": 12,
+				"months": [ "may", "june", "july", "august", "september", "october", "november" ],
 				"code": "wildgrass:ryegrass-perennial-4-free"
 			},
 			"*-4-*": {
 				"growthChanceOnTick": 0.08,
-				"minTemp": -2,
-				"code": "wildgrass:ryegrass-perennial-2-free"
+ 				"code": "wildgrass:ryegrass-perennial-2-free"
 			}
 		},
 		"drawnHeightByType": {

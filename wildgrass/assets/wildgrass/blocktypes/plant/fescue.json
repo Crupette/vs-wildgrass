@@ -36,11 +36,11 @@
 			"*-3-*": {
 				"growthChanceOnTick": 0.02,
 				"minTemp": 12,
+				"months": [ "june", "july", "august" ],
 				"code": "wildgrass:fescue-meadow-4-free"
 			},
 			"*-4-*": {
 				"growthChanceOnTick": 0.08,
-				"minTemp": -3,
 				"code": "wildgrass:fescue-meadow-2-free"
 			}
 		},

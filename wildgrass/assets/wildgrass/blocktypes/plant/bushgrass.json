@@ -36,11 +36,11 @@
 			"*-3-*": {
 				"growthChanceOnTick": 0.02,
 				"minTemp": 12,
+				"months": [ "may", "june", "july", "august", "september" ],
 				"code": "wildgrass:bushgrass-4-free"
 			},
 			"*-4-*": {
 				"growthChanceOnTick": 0.08,
-				"minTemp": -3,
 				"code": "wildgrass:bushgrass-2-free"
 			}
 		},
@@ -78,8 +78,8 @@
 	"texturesByType": {
 		"*-4-*": {
 			"grass": { "base": "block/plant/bushgrass/bushgrass-3"},
-			"culm": { "base": "block/plant/bushgrass/bushgrass-4-culm"},
-			"flowers": { "base": "block/plant/bushgrass/bushgrass-4-flowers"}
+			"culm": { "base": "block/plant/bushgrass/bushgrass-culm"},
+			"flowers": { "base": "block/plant/bushgrass/bushgrass-flowers-*"}
 		},
 		"*": {
 			"grass": { "base": "block/plant/bushgrass/bushgrass-{growth}"}

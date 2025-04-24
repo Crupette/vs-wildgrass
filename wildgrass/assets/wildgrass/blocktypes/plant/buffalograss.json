@@ -26,13 +26,13 @@
 			"*-1-*": {
 				"growthChanceOnTick": 0.06,
 				"minTemp": 10,
+				"months": [ "april", "may", "june", "july", "august", "september", "october", "november", "december" ],
 				"code": "wildgrass:buffalograss-2-free"
 			},
 			"*-2-*": {
-				"growthChanceOnTick": 0.04,
-				"minTemp": 10,
+				"growthChanceOnTick": 0.08,
 				"code": "wildgrass:buffalograss-1-free"
-			},
+			}
 		},
 		"allowStepWhenStuck": true,
 		"overrideRandomDrawOffset": 2
@@ -62,7 +62,7 @@
 	"texturesByType": {
 		"*-2-*": {
 			"grass": { "base": "block/plant/buffalograss/buffalograss-1" },
-			"flowers": { "base": "block/plant/buffalograss/buffalograss-flowers" }
+			"flowers": { "base": "block/plant/buffalograss/buffalograss-flowers-*" }
 		},
 		"*": {
 			"grass": { "base": "block/plant/buffalograss/buffalograss-{growth}"}

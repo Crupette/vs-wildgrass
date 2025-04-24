@@ -46,7 +46,6 @@
 			},
 			"*-5-*": {
 				"growthChanceOnTick": 0.08,
-				"minTemp": 0,
 				"code": "wildgrass:switchgrass-2-free"
 			}
 		},
@@ -85,7 +84,7 @@
 	"texturesByType": {
 		"*-5-*": {
 			"grass": { "base": "block/plant/switchgrass/switchgrass-4" },
-			"flowers": { "base": "block/plant/switchgrass/switchgrass-flowers" }
+			"flowers": { "base": "block/plant/switchgrass/switchgrass-flowers-*" }
 		},
 		"*": {
 			"grass": { "base": "block/plant/switchgrass/switchgrass-{growth}"}

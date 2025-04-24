@@ -36,11 +36,11 @@
 			"*-3-*": {
 				"growthChanceOnTick": 0.02,
 				"minTemp": 12,
+				"months": [ "may", "june", "july" ],
 				"code": "wildgrass:buttongrass-4-free"
 			},
 			"*-4-*": {
 				"growthChanceOnTick": 0.16,
-				"minTemp": -3,
 				"code": "wildgrass:buttongrass-1-free"
 			}
 		},

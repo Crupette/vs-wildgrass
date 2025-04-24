@@ -36,11 +36,11 @@
 			"*-3-*": {
 				"growthChanceOnTick": 0.01,
 				"minTemp": 16,
+				"months": [ "june", "july", "august" ],
 				"code": "wildgrass:rush-common-4-free"
 			},
 			"*-4-*": {
 				"growthChanceOnTick": 0.08,
-				"minTemp": 8,
 				"code": "wildgrass:rush-common-2-free"
 			}
 		},

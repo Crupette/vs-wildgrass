@@ -19,7 +19,7 @@ namespace Wildgrass
             [JsonProperty]
             public float growthChanceOnTick;
             [JsonProperty]
-            public float minTemp;
+            public float? minTemp;
             [JsonProperty]
             public string[] months;
             [JsonProperty]
@@ -58,7 +58,8 @@ namespace Wildgrass
             if(offThreadRandom.NextDouble() > growthChanceOnTick) return false;
 
             ClimateCondition climateCond = GetClimateAt(world.BlockAccessor, pos);
-            if(climateCond.Temperature < Growth.minTemp) return false;
+            if(Growth.minTemp != null)
+                if(climateCond.Temperature < Growth.minTemp) return false;
 
             if(Growth.months?.Any() ?? false) {
                 EnumMonth month = world.Calendar.MonthName;
