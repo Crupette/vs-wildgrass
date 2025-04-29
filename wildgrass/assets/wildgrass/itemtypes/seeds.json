@@ -37,7 +37,7 @@
 					"shape": { "base": "block/switchgrass/switchgrass-potted" },
 					"textures": {
 						"grass": { "base": "block/plant/switchgrass/switchgrass-4" },
-						"flowers": { "base": "block/plant/switchgrass/switchgrass-flowers" }
+						"flowers": { "base": "block/plant/switchgrass/switchgrass-flowers-1" }
 					}
 				},
 				"seeds-rush-common": {
@@ -51,8 +51,8 @@
 					"shape": { "base": "block/bushgrass/bushgrass-potted"},
 					"textures": {
 						"grass": { "base": "block/plant/bushgrass/bushgrass-3"},
-						"culm": { "base": "block/plant/bushgrass/bushgrass-4-culm"},
-						"flowers": { "base": "block/plant/bushgrass/bushgrass-4-flowers"}
+						"culm": { "base": "block/plant/bushgrass/bushgrass-culm"},
+						"flowers": { "base": "block/plant/bushgrass/bushgrass-flowers-1"}
 					}
 				},
 				"seeds-ryegrass-perennial": {
@@ -66,7 +66,7 @@
 					"shape": { "base": "block/bluegrass/bluegrass-potted"},
 					"textures": {
 						"grass": { "base": "block/plant/bluegrass/bluegrass-3"},
-						"flowers": { "base": "block/plant/bluegrass/bluegrass-flowers"}
+						"flowers": { "base": "block/plant/bluegrass/bluegrass-flowers-1"}
 					}
 				},
 				"seeds-fescue-meadow": {
@@ -81,6 +81,21 @@
 					"textures": {
 						"grass": { "base": "block/plant/buttongrass/buttongrass-3"},
 						"flowers": { "base": "block/plant/buttongrass/buttongrass-flowers"}
+					}
+				},
+				"seeds-bermudagrass": {
+					"shape": { "base": "block/bermudagrass/bermudagrass-potted"},
+					"textures": {
+						"grass": { "base": "block/plant/bermudagrass/bermudagrass-2"},
+						"culms": { "base": "block/plant/bermudagrass/bermudagrass-culms"},
+						"flowers": { "base": "block/plant/bermudagrass/bermudagrass-flowers"}
+					}
+				},
+				"seeds-buffalograss": {
+					"shape": { "base": "block/buffalograss/buffalograss-potted"},
+					"textures": {
+						"grass": { "base": "block/plant/buffalograss/buffalograss-1"},
+						"flowers": { "base": "block/plant/buffalograss/buffalograss-flowers-1"}
 					}
 				}
 			}
