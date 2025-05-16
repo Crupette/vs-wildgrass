@@ -6,7 +6,7 @@
         "Crupette"
     ],
     "description": "Several different types of wild grasses",
-    "version": "1.3.1",
+    "version": "1.3.2",
     "dependencies": {
         "game": ""
     }

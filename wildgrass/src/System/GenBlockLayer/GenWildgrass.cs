@@ -137,7 +137,7 @@ namespace Wildgrass
             int hereId = chunk.Data[chunki];
             
             if(!WildgrassCore.IsDev)
-            if(api.World.Blocks[hereId] is not BlockTallGrass) return;
+            if(!api.World.Blocks[hereId].Code.PathStartsWith("tallgrass")) return;
 
             WildgrassSpecies species = SpeciesForPos(worldPos, rainRel, tempRel, forestRel);
             if(species == null) {

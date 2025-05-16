@@ -70,7 +70,6 @@ namespace Wildgrass
             Block nextBlock = world.GetBlock(Growth.code);
             if(nextBlock != null) extra = nextBlock;
             return extra != null;
-            
         }
 
         public override void OnServerGameTick(IWorldAccessor world, BlockPos pos, object extra = null)
