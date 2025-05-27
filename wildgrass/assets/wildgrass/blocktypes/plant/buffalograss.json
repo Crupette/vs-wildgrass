@@ -42,7 +42,6 @@
 	"matterstate": "solid",
 	"faceCullMode": "Default",
 	"renderpass": "OpaqueNoCull",
-	"doNotRenderAtLod2": true,
 	"randomDrawOffset": true,
 	"randomizeRotations": true,
 	"randomSizeAdjust": 0.25,

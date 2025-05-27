@@ -61,7 +61,6 @@
 	},
 
 	"renderpass": "OpaqueNoCull",
-	"doNotRenderAtLod2": false,
 	"randomDrawOffset": true,
 	"randomizeRotations": true,
 

@@ -1,7 +1,8 @@
 {
-	"code": "fescue-meadow",
+	"code": "fescue",
 	"class": "wildgrass.BlockWildgrass",
 	"variantgroups": [
+		{ "code": "type", "states": ["meadow"]},
 		{ "code": "growth", "states": [ "0", "1", "2", "3", "4" ] },
 		{ "code": "cover", "states": ["free", "snow"] }
 	],
@@ -59,7 +60,6 @@
 	"matterstate": "solid",
 	"faceCullMode": "Default",
 	"renderpass": "OpaqueNoCull",
-	"doNotRenderAtLod2": true,
 	"randomDrawOffset": true,
 	"randomizeRotations": true,
 
