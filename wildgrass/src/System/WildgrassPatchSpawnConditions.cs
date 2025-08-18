@@ -34,7 +34,8 @@ namespace Wildgrass
                 var worldgenBlocks = entity?.Server?.SpawnConditions?.Worldgen?.InsideBlockCodes;
                 var runtimeBlocks = entity?.Server?.SpawnConditions?.Runtime?.InsideBlockCodes;
 
-                if(worldgenBlocks != null && worldgenBlocks.Contains(tallgrassCode)) {
+                if (worldgenBlocks != null && worldgenBlocks.Contains(tallgrassCode))
+                {
                     worldgenBlocks = worldgenBlocks.Append(grassCodes.ToArray());
                     entity.Server.SpawnConditions.Worldgen.InsideBlockCodes = worldgenBlocks;
                 }
