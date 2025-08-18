@@ -9,7 +9,7 @@ namespace Wildgrass
 {
     public class WildgrassBiomesCompat : ModSystem
     {
-        public static bool IsBiomesEnabled;
+        public static bool IsBiomesEnabled = false;
 
         public override bool ShouldLoad(ICoreAPI api)
         {
