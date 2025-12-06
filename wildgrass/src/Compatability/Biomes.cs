@@ -23,10 +23,8 @@ namespace Wildgrass
 
             BiomesModSystem biomesMod = api.ModLoader.GetModSystem<BiomesModSystem>();
             IMapChunk chunk = api.World.BlockAccessor.GetMapChunkAtBlockPos(pos);
-            var chunkRealms = new List<string>();
-            if(biomesMod.getModProperty(chunk, BiomesModSystem.MapRealmPropertyName, ref chunkRealms) == EnumCommandStatus.Error) {
-                return true;
-            }
+            var chunkRealms = Biomes.util.Util.GetChunkRealms(chunk);
+            if (chunkRealms == null) return true;
             return species.biorealm.Intersect(chunkRealms).Any();
         }
     }
