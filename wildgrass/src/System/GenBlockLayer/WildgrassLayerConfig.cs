@@ -1,4 +1,5 @@
 using System;
+using Biomes.Api;
 using HarmonyLib;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -60,7 +61,8 @@ namespace Wildgrass
                 ref var species = ref(blockLayerConfig.Species[i]);
                 species.BlockIds = new int[species.BlockCodes.Length];
                 species.index = i;
-                for(int j = 0; j < species.BlockCodes.Length; j++) {
+                for (int j = 0; j < species.BlockCodes.Length; j++)
+                {
                     species.BlockIds[j] = api.WorldManager.GetBlockId(species.BlockCodes[j]);
                 }
             }

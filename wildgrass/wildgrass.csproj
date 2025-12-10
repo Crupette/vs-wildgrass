@@ -16,7 +16,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Biomes">
-      <HintPath>/home/jon/.config/VintagestoryDataDev/Mods/biomes/biomes.dll</HintPath>
+      <HintPath>/home/jon/.config/VintagestoryDataDev/Mods/biomes/Biomes.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft">

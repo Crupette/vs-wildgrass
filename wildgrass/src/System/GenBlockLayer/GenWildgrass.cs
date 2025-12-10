@@ -43,9 +43,9 @@ namespace Wildgrass
             api.Event.InitWorldGenerator(InitWildgrassGen, "superflat");
 
             if(TerraGenConfig.DoDecorationPass) {
-                api.Event.ChunkColumnGeneration(OnChunkColumnGeneration, EnumWorldGenPass.Terrain, "standard");
+                api.Event.ChunkColumnGeneration(OnChunkColumnGeneration, EnumWorldGenPass.Vegetation, "standard");
                 if(WildgrassCore.IsDev) {
-                    api.Event.ChunkColumnGeneration(OnChunkColumnGeneration, EnumWorldGenPass.Terrain, "superflat");
+                    api.Event.ChunkColumnGeneration(OnChunkColumnGeneration, EnumWorldGenPass.Vegetation, "superflat");
                 }
             }
         }
@@ -167,7 +167,7 @@ namespace Wildgrass
                    tempRel >= species.MinTemp &&
                    tempRel <= species.MaxTemp) {
                     if(WildgrassBiomesCompat.IsBiomesEnabled)
-                    if(!WildgrassBiomesCompat.WildgrassCanBeInBiome(api, pos, species)) 
+                    if(!WildgrassBiomesCompat.WildgrassCanBeInBiome(pos, species)) 
                         continue;
                         
                     if(finalSpecies.Item1 < rndVal)
