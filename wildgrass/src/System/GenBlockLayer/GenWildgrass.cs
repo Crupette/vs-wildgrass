@@ -22,7 +22,7 @@ namespace Wildgrass
         public ClampedSimplexNoise[] grassDensity;
 
         public WildgrassLayerConfig wildgrass;
-        public static GenWildgrass Instance;
+        public WildgrassCore wildgrassSystem;
 
         public override double ExecuteOrder()
         {
@@ -37,7 +37,7 @@ namespace Wildgrass
         public override void StartServerSide(ICoreServerAPI api)
         {
             this.api = api;
-            Instance = this;
+            wildgrassSystem = api.ModLoader.GetModSystem<WildgrassCore>();
 
             api.Event.InitWorldGenerator(InitWildgrassGen, "standard");
             api.Event.InitWorldGenerator(InitWildgrassGen, "superflat");
@@ -166,8 +166,8 @@ namespace Wildgrass
                    rainRel <= species.MaxRain &&
                    tempRel >= species.MinTemp &&
                    tempRel <= species.MaxTemp) {
-                    if(WildgrassBiomesCompat.IsBiomesEnabled)
-                    if(!WildgrassBiomesCompat.WildgrassCanBeInBiome(pos, species)) 
+                    if(wildgrassSystem.BiomesCompatibility is not null)
+                    if(!wildgrassSystem.BiomesCompatibility.WildgrassCanBeInBiome(pos, species)) 
                         continue;
                         
                     if(finalSpecies.Item1 < rndVal)

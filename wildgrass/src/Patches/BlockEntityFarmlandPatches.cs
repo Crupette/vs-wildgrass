@@ -18,10 +18,11 @@ static class BlockEntityFarmland_UpdatePatch
 {
     static void WildgrassWeed(IBlockAccessor blockAccessor, int blockId, BlockPos abovePos)
     {
-        GenWildgrass genWildgrassSystem = GenWildgrass.Instance;
-
         Block block = blockAccessor.GetBlock(blockId);
         if(block is BlockTallGrass) {
+            var api = Traverse.Create(block).Field("api").GetValue<ICoreAPI>();
+            var genWildgrassSystem = api.ModLoader.GetModSystem<GenWildgrass>();
+
             var climate = blockAccessor.GetClimateAt(abovePos, EnumGetClimateMode.WorldGenValues);
 
             float rainRel = climate.Rainfall;

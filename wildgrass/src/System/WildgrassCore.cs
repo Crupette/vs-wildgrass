@@ -14,11 +14,18 @@ namespace Wildgrass
         public ICoreAPI api;
         public static bool IsDev = false;
         public static WildgrassCore Instance;
+
+        public WildgrassBiomesCompat BiomesCompatibility = null;
         
         public override void Start(ICoreAPI api)
         {
             IsDev = Mod.Info.Version.Contains("dev");
             Instance = this;
+
+            if(api.ModLoader.IsModEnabled("biomes"))
+            {
+                BiomesCompatibility = new();
+            }
 
             this.api = api;
             if(!Harmony.HasAnyPatches(Mod.Info.ModID)) {
